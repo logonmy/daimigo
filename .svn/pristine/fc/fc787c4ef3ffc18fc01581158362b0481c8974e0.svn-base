@@ -1,0 +1,70 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="{Fei:$STATICS}css/login.css" />
+
+<script type="text/javascript" language="javascript">
+<!--
+	window.onload = function (){
+		var txtUserName = document.getElementById("username");
+		var txtPassword = document.getElementById("password");
+		changeimg();
+		var username = readCookie("username");
+		if(username!="")
+		{
+		txtUserName.value = username;
+		txtPassword.focus();
+		}
+		else	txtUserName.focus();
+		document.getElementById("code").value = "";
+	}
+function changeimg(){document.getElementById('SeedImg').src='../inc/checkcode.fei?'+Math.random();}
+function writeCookie(name, value, hours){
+  var expire = "";
+  if(hours != null)  {
+    expire = new Date((new Date()).getTime() + hours * 3600000);
+    expire = "; expires=" + expire.toGMTString();
+  }
+  document.cookie = name + "=" + escape(value) + expire;
+
+}
+function readCookie(name){
+  var cookieValue = "";
+  var search = name + "=";
+  if(document.cookie.length > 0) { 
+    offset = document.cookie.indexOf(search);
+    if (offset != -1)  { 
+      offset += search.length;
+      end = document.cookie.indexOf(";", offset);
+      if (end == -1) end = document.cookie.length;
+      cookieValue = unescape(document.cookie.substring(offset, end))
+    }
+  }
+  return cookieValue;
+}
+
+
+-->
+</script>
+</head>
+<body>
+
+	<div id="logo"></div>
+<div id="in">
+	<div id="left" ></div>
+	<div id="right">
+<form method="post" action="{Fei:FeiUrl('yunet','login')}" onsubmit="writeCookie('username',this.username.value, 1)">
+<input type="hidden" name="gotopage" value="/feicms/index.fei">	<ul>
+        <li><span>用户名: </span><input type="text" id="username" name="username" size="20" maxlength="20" value="" style="width:192px;" /></li>
+        <li><span>密码: </span><input type="password" id="password" maxlength="20" name="password"  size="20" value="" style="width:192px;" /></li>
+        <li><span>验证码：</span><input type="text" id="code" name="code"   size="10" maxlength="4" value="" style="width:52px;" /><img style="cursor:pointer;position:relative;top:3px;margin-right:4px;padding-bottom:10px;" src="../inc/checkcode.fei" id="SeedImg" align="absmiddle" border="0" alt="ç‚¹æˆ‘åˆ·æ–°" title="ç‚¹æˆ‘åˆ·æ–°" onclick="changeimg()" /></li>
+        <li><input type="submit" name="bt_login" id="bt_login" value="" class="button" /></li>
+	</ul>
+</form>
+	</div>
+</div>
+<div id="footer">
+Copyright &copy; 2004-2012 <a href="http://www.feei.cn" target="_blank" title="FEEI TECHNOLOGY">Feei.</a> All Rights Reserved.</div> 
+</body>
+</html>

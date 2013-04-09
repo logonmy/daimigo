@@ -1,0 +1,24 @@
+<div class="grid_2 Lf">
+  <div class="MenuBg Lf">
+    <div class="Bg_left">
+        <div class="TitBg Lf">
+        <h4></h4>
+        <div class="Left_btn"></div>
+        </div>
+             <div class="Menu">
+             {Fei:foreach from=$top2category item=category1}
+              <h2 class="acc_trigger"><a href="#">{Fei:$category1.catname}</a></h2>
+              <div class="acc_container">
+                <div class="sebar">
+                  {Fei:foreach from=$category1.sanji item=cate}
+                     <h3><a href="{Fei:FeiUrl($smarty.get.c,$cate.letter)}" {Fei:if $smarty.get.a==$cate.letter}class="active"{Fei:/if}>{Fei:$cate.catname}</a></h3>     
+                  {Fei:/foreach}
+                </div>
+              </div>
+              {Fei:/foreach}
+            </div>
+      <div class="hr"></div>
+      <div class="Cbtn"><span>系统当前在线人数（28/100）</span></div>
+ </div>
+</div>
+</div>

@@ -1,0 +1,123 @@
+
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+{Fei:include file="Public/header.html"}
+<link href="{Fei:$STATICS}css/style.css" rel="stylesheet" type="text/css">
+<script src="{Fei:$STATICS}scripts/script.js"></script>
+<link href='{Fei:$STATICS}css/css.css' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  {Fei:include file="Public/nav.html"}
+    <!--NAV ENDS HERE-->
+  
+  
+  <div class="main">
+  
+  {Fei:include file="Public/notice.html"}
+    
+  <div class="shortable-content">
+  
+      
+
+<div class="box _100">
+            <div class="box-header">
+              项目列表
+              <i class="icon-remove-sign close" title="Close"></i>
+              <i class="icon-minus-sign minimize" title="Minimize/Maximize"></i>
+              </div>
+            <div class="box-content">
+              <table  border="1" bordercolor="#dfdfdf" class="static_table">
+                        <thead>
+                        <tr>
+                        <th>项目名称</th>
+                        <th>项目进度</th>
+                        <th>负责人</th>
+                        <th>操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                        <td>中国教育培训网</td>
+                        <td>90%</td>
+                        <td>吴飞飞</td>
+                        <td class="center">X -</td>
+                        </tr>
+                        <tr>
+                        <td>Trident</td>
+                        <td>Internet
+                        Explorer 5.0</td>
+                        <td>Win 95+</td>
+                        <td class="center">5</td>
+                        </tr>
+                        <tr>
+                        <td>Trident</td>
+                        <td>Internet
+                        Explorer 5.5</td>
+                        <td>Win 95+</td>
+                        <td class="center">5.5</td>
+                        </tr>
+                        <tr>
+                        <td>Trident</td>
+                        <td>Internet
+                        Explorer 6</td>
+                        <td>Win 98+</td>
+                        <td class="center">6</td>
+                        </tr>
+                        <tr>
+                        <td>Trident</td>
+                        <td>Internet Explorer 7</td>
+                        <td>Win XP SP2+</td>
+                        <td class="center">7</td>
+                        </tr>
+                        <tr>
+                        <td>Trident</td>
+                        <td>AOL browser (AOL desktop)</td>
+                        <td>Win XP</td>
+                        <td class="center">6</td>
+                        </tr>
+                        <tr>
+                        <td>Gecko</td>
+                        <td>Firefox 1.0</td>
+                        <td>Win 98+ / OSX.2+</td>
+                        <td class="center">1.7</td>
+                        </tr>
+                        <tr>
+                        <td>Gecko</td>
+                        <td>Firefox 1.5</td>
+                        <td>Win 98+ / OSX.2+</td>
+                        <td class="center">1.8</td>
+                        </tr>
+                        <tr>
+                        <td>Gecko</td>
+                        <td>Firefox 2.0</td>
+                        <td>Win 98+ / OSX.2+</td>
+                        <td class="center">1.8</td>
+                        </tr>
+                        <tr>
+                        <td>Gecko</td>
+                        <td>Firefox 3.0</td>
+                        <td>Win 2k+ / OSX.3+</td>
+                        <td class="center">1.9</td>
+                        </tr>
+                        <tr>
+                        <td>Gecko</td>
+                        <td>Firefox 3.0</td>
+                        <td>Win 2k+ / OSX.3+</td>
+                        <td class="center">1.9</td>
+                        </tr> 
+                        </tbody>
+                        </table>
+            </div>
+          </div>
+    
+  </div><!--SHORTABLECONTENT-ENDS-->
+
+  </div><!--MAIN ENDS-->
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7"/>-->
+<title>后台首页</title>
+<link href="{Fei:$CSS_PATH}grid.css" type="text/css" rel="stylesheet"/>
+<link href="{Fei:$CSS_PATH}jquery-css.css" type="text/css" rel="stylesheet"/>
+<script type="text/javascript" src="{Fei:$JS_PATH}jquery.js"></script>
+<script type="text/javascript" src="{Fei:$JS_PATH}trhover.js"></script>
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script> 
+ <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script> 
+
+<script>
+$(document).ready(function() {
+  $(".NoticeMain .menuUnit").each(function() {
+    $(this).hover(function(){
+    $(this).children(".downList").css("display", "block");
+        },
+    function(){
+      $(this).children(".downList").css("display","none");
+      }
+    );
+});
+$("#Del").click(function(){
+  $(".Notice").hide("slow");
+  })
+  $("#N_Del").click(function(){
+  $(".EmailPost").hide("slow");
+  })
+  $("#G_Del").click(function(){
+  $(".gridGz").hide("slow");
+  })
+
+    });
+</script>
+
+<script>
+$(document).ready(function(e) {
+    $("#Jicon").click(function(){
+      $(".sharp").slideUp();
+      $("#jiaicon").css("display","block");
+      $("#Jicon").css("display","none");
+    });
+    $("#jiaicon").click(function(){
+      $(".sharp").slideDown();
+      $("#Jicon").css("display","block");
+      $("#jiaicon").css("display","none");
+    })
+    $("#N_jhao").click(function(){
+      $(".Nharp").slideUp();
+      $("#S_jhao").css("display","block");
+      $("#N_jhao").css("display","none");
+    });
+    $("#S_jhao").click(function(){
+      $(".Nharp").slideDown();
+      $("#N_jhao").css("display","block");
+      $("#S_jhao").css("display","none");
+    })
+    $("#G_jhao").click(function(){
+      $(".Gharp").slideUp();
+      $("#z_jhao").css("display","block");
+      $("#G_jhao").css("display","none");
+    });
+    $("#z_jhao").click(function(){
+      $(".Gharp").slideDown();
+      $("#G_jhao").css("display","block");
+      $("#z_jhao").css("display","none");
+    })
+});
+</script>
+</head>
+<body>
+  <div class="fei_grid">
+    <!-- Head Content -->
+    {Fei:include file="public/head.html"}
+    <!-- Top Menu -->
+    {Fei:include file="public/top_menu.html"}
+    <div class="grid_12">
+    <!-- Left Menu -->
+    {Fei:include file="public/left_menu.html"}
+   <!-- tight_table-->
+   <div class="grid_10 Mf">
+      <div class="TopBg">
+     <div class="grid_1 Lf"><div class="imgLeft"><img src="{Fei:$IMG_PATH}rtop.jpg" width="98" height="28px" /></div></div>
+       <div class="grid_11 Mf">
+        <div class="News">
+        <li><span>湖南女孩坠落无盖下水道是天灾还是人祸   <em>(03/25)</em></span></li>
+        <li><span>湖南女孩坠落无盖下水道是天灾还是人祸   <em>(03/25)</em></span></li>
+        <li style="background:none;"><span>湖南女孩坠落无盖下水道是天灾还是人祸   <em>(03/25)</em></span></li>
+        </div>
+       </div>
+     </div>
+    <div class="TabWra">
+      <div class="grid_12">
+         <div class="grid_6 Lf">
+
+<a href="{Fei:FeiUrl('setting','category')}" title="增加栏目">增加栏目</a>
+{Fei:foreach from=$arr item=item1} 
+        <ul style="height: 200px;">
+                <li class="padd-10">
+                    <a href="{Fei:FeiUrl('setting','category')}&catid={Fei:$item1.catid}" class="moo">{Fei:$item1.catname}</a>
+                    <ul>
+                       {Fei:foreach from=$item1.zi item=item2}
+                        <li>
+                            <a href="{Fei:FeiUrl('setting','category')}&catid={Fei:$item2.catid}">{Fei:$item2.catname}</a>
+                            <ul>
+                                {Fei:foreach from=$item2.zi item=item3} 
+                                <li>
+                                     <a href="{Fei:FeiUrl('setting','category')}&catid={Fei:$item3.catid}">{Fei:$item3.catname}</a>
+                                </li>
+                                {Fei:/foreach}  
+                            </ul>
+                        </li>
+                        {Fei:/foreach}
+                    </ul>
+                </li>
+            </ul>
+       {Fei:/foreach} 
+
+      
+
+  </div>
+   </div>
+    {Fei:include file="public/foot.html"}
+  </div>
+</body>
+</html>

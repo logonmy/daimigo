@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7"/>-->
+<title>后台首页</title>
+<link href="{Fei:$CSS_PATH}grid.css" type="text/css" rel="stylesheet"/>
+<link href="{Fei:$CSS_PATH}jquery-css.css" type="text/css" rel="stylesheet"/>
+<script type="text/javascript" src="{Fei:$JS_PATH}jquery.js"></script>
+<script type="text/javascript" src="{Fei:$JS_PATH}trhover.js"></script>
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script> 
+ <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script> 
+
+<script>
+$(document).ready(function() {
+  $(".NoticeMain .menuUnit").each(function() {
+    $(this).hover(function(){
+    $(this).children(".downList").css("display", "block");
+        },
+    function(){
+      $(this).children(".downList").css("display","none");
+      }
+    );
+});
+$("#Del").click(function(){
+  $(".Notice").hide("slow");
+  })
+  $("#N_Del").click(function(){
+  $(".EmailPost").hide("slow");
+  })
+  $("#G_Del").click(function(){
+  $(".gridGz").hide("slow");
+  })
+
+    });
+</script>
+
+<script>
+$(document).ready(function(e) {
+    $("#Jicon").click(function(){
+      $(".sharp").slideUp();
+      $("#jiaicon").css("display","block");
+      $("#Jicon").css("display","none");
+    });
+    $("#jiaicon").click(function(){
+      $(".sharp").slideDown();
+      $("#Jicon").css("display","block");
+      $("#jiaicon").css("display","none");
+    })
+    $("#N_jhao").click(function(){
+      $(".Nharp").slideUp();
+      $("#S_jhao").css("display","block");
+      $("#N_jhao").css("display","none");
+    });
+    $("#S_jhao").click(function(){
+      $(".Nharp").slideDown();
+      $("#N_jhao").css("display","block");
+      $("#S_jhao").css("display","none");
+    })
+    $("#G_jhao").click(function(){
+      $(".Gharp").slideUp();
+      $("#z_jhao").css("display","block");
+      $("#G_jhao").css("display","none");
+    });
+    $("#z_jhao").click(function(){
+      $(".Gharp").slideDown();
+      $("#G_jhao").css("display","block");
+      $("#z_jhao").css("display","none");
+    })
+});
+</script>
+</head>
+<body>
+  <div class="fei_grid">
+    <!-- Head Content -->
+    {Fei:include file="public/head.html"}
+    <!-- Top Menu -->
+    {Fei:include file="public/top_menu.html"}
+    <div class="grid_12">
+    <!-- Left Menu -->
+    {Fei:include file="public/left_menu.html"}
+   <!-- tight_table-->
+   <div class="grid_10 Mf">
+      <div class="TopBg">
+     <div class="grid_1 Lf"><div class="imgLeft"><img src="{Fei:$IMG_PATH}rtop.jpg" width="98" height="28px" /></div></div>
+       <div class="grid_11 Mf">
+        <div class="News">
+        <li><span>湖南女孩坠落无盖下水道是天灾还是人祸   <em>(03/25)</em></span></li>
+        <li><span>湖南女孩坠落无盖下水道是天灾还是人祸   <em>(03/25)</em></span></li>
+        <li style="background:none;"><span>湖南女孩坠落无盖下水道是天灾还是人祸   <em>(03/25)</em></span></li>
+        </div>
+       </div>
+     </div>
+    <div class="TabWra">
+      <div class="grid_12">
+         <div class="grid_6 Lf">
+
+
+<a href="{Fei:FeiUrl('setting','permission_set')}&action=add">添加一个新的权限</a>
+<div class="box _75">
+            <div class="box-header">
+              权限设置
+              <i class="icon-refresh" title="刷新"></i>
+              <a href="{Fei:FeiUrl('setting','permission_set')}&action=add">
+                  <i class="icon-plus" title="添加一个新的权限"></i>
+              </a>
+              </div>
+            <div class="box-content">
+              <table  border="1" bordercolor="#dfdfdf" class="static_table">
+                        <thead>
+                        <tr>
+                        <th>ID</th>
+                        <th>名称</th>
+                        <th>控制器/方法</th>
+                        <th>权限</th>
+                        <th>操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {Fei:foreach from=$result item=acl}
+                        <tr>
+                        <td>{Fei:$acl.aclid}</td>
+                        <td>{Fei:$acl.name}</td>
+                        <td>{Fei:$acl.controller}/{Fei:$acl.action}</td>
+                        <td class="center">{Fei:$acl.acl_name}</td>
+                        <td>
+                            <a href="{Fei:FeiUrl('setting','permission_set')}&action=edit&aclid={Fei:$acl.aclid}" title="修改"><i class="icon-cog" title="修改">修改</i></a>|
+                            <a href="{Fei:FeiUrl('setting','permission_set')}&action=del&aclid={Fei:$acl.aclid}" title="删除"><i class="icon-remove" title="删除">删除</i></a>
+                        </td>
+                        </tr>
+                        {Fei:/foreach}
+                        </tbody>
+                        </table>
+            </div>
+          </div>
+
+      
+
+  </div>
+   </div>
+    {Fei:include file="public/foot.html"}
+  </div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+{Fei:include file="Public/header.html"}
+<link href="{Fei:$STATICS}css/style.css" rel="stylesheet" type="text/css">
+<script src="{Fei:$STATICS}scripts/script.js"></script>
+<link href='{Fei:$STATICS}css/css.css' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  {Fei:include file="Public/nav.html"}
+    <!--NAV ENDS HERE-->
+  
+  
+  <div class="main">
+  
+  {Fei:include file="Public/notice.html"}
+    
+  <div class="shortable-content">
+
+<div class="box _100">
+        <div class="box-header">
+          我的消息
+          <i class="icon-minus-sign minimize" title="Minimize/Maximize"></i>
+          </div>
+        <div class="box-content">
+          <table cellpadding="0" cellspacing="0" border="0" class="dTable" id="dynamic">
+                    <thead>
+                    <tr>
+                    <th>发件人<span class="sorting" style="display: block;"></span></th>
+                    <th>主题</th>
+                    <th>时间</th>
+                    <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {Fei:foreach from=$MSGS item=msg}
+                         <tr>
+                         <td>{Fei:$msg.send}</td>
+                         <td>{Fei:$msg.title}</td>
+                         <td>{Fei:$msg.time}</td>
+                         <td class="center">4</td>
+                         </tr>
+                    {Fei:/foreach}
+                    </tbody>
+                    </table>
+        </div>
+      </div>
+    
+  </div><!--SHORTABLECONTENT-ENDS-->
+
+  </div><!--MAIN ENDS-->
+</body>
+</html>

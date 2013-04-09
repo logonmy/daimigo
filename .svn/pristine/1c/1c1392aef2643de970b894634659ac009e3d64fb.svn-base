@@ -1,0 +1,22 @@
+<div class="Menu_Head grid_12 Lf">
+  <div class="grid_2 grid">
+    <div class="MenuLeft Lf">
+    <a href="#" class="Seticon M_left"></a>
+    <a href="#" class="Msgone M_left"></a>
+    <a href="#" class="Msgtwo M_left"></a> 
+    <a href="#" class="Msgthird "></a>
+    </div>
+  </div>
+  <div class="grid_10 Mf">
+    <div class="nav">
+      <ul>
+        {Fei:foreach from=$TopCategory item=category}
+        <li {Fei:if $smarty.get.c==$category.letter}class="HomeCurr"{Fei:/if}>
+            <a href="{Fei:FeiUrl($category.letter)}"><img src="{Fei:$IMG_PATH}{Fei:$category.ico}.png" /></a>
+            <font><a href="{Fei:FeiUrl($category.letter)}">{Fei:$category.catname}</font></a>
+        </li>
+        {Fei:/foreach}
+     </ul>
+  </div>
+  </div>
+</div>

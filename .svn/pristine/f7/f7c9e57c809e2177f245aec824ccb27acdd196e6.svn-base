@@ -1,0 +1,25 @@
+<html>
+<head>
+	<title>Flow Setting</title>
+</head>
+<body>
+<h1>Flow Setting</h1>
+<div>
+	<form id="add_flow_table">
+		<label>name</label>
+		<input type="text">
+		
+		<label>style</label>
+		<input type="text">
+
+		<label>type</label>
+		<input type="text">
+
+		<label>value</label>
+		<input type="text">
+
+		<input type="submit">
+	</form>
+</div>
+</body>
+</html>

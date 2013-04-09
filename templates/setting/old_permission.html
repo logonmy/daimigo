@@ -1,0 +1,67 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+{Fei:include file="Public/header.html"}
+<link href="{Fei:$STATICS}css/style.css" rel="stylesheet" type="text/css">
+<script src="{Fei:$STATICS}scripts/script.js"></script>
+<link href='{Fei:$STATICS}css/css.css' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  {Fei:include file="Public/nav.html"}
+    <!--NAV ENDS HERE-->
+  
+  
+  <div class="main">
+  
+ {Fei:include file="Public/notice.html"}
+    
+  <div class="shortable-content">
+  
+      <div class="box _75">
+            <div class="box-header">
+              权限设置
+              <i class="icon-refresh" title="刷新"></i>
+              <a href="{Fei:FeiUrl('setting','permission_set')}&action=add">
+                  <i class="icon-plus" title="添加一个新的权限"></i>
+              </a>
+              </div>
+            <div class="box-content">
+              <table  border="1" bordercolor="#dfdfdf" class="static_table">
+                        <thead>
+                        <tr>
+                        <th>ID</th>
+                        <th>名称</th>
+                        <th>控制器/方法</th>
+                        <th>权限</th>
+                        <th>操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {Fei:foreach from=$result item=acl}
+                        <tr>
+                        <td>{Fei:$acl.aclid}</td>
+                        <td>{Fei:$acl.name}</td>
+                        <td>{Fei:$acl.controller}/{Fei:$acl.action}</td>
+                        <td class="center">{Fei:$acl.acl_name}</td>
+                        <td>
+                            <a href="{Fei:FeiUrl('setting','permission_set')}&action=edit&aclid={Fei:$acl.aclid}" title="修改"><i class="icon-cog" title="修改">修改</i></a>|
+                            <a href="{Fei:FeiUrl('setting','permission_set')}&action=del&aclid={Fei:$acl.aclid}" title="删除"><i class="icon-remove" title="删除">删除</i></a>
+                        </td>
+                        </tr>
+                        {Fei:/foreach}
+                        </tbody>
+                        </table>
+            </div>
+          </div>
+    
+      
+  </div><!--SHORTABLECONTENT-ENDS-->
+
+  </div><!--MAIN ENDS-->
+</body>
+</html>

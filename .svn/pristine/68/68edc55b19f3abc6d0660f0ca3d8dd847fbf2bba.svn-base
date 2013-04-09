@@ -1,0 +1,216 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7"/>-->
+<title>后台首页</title>
+<link href="{Fei:$CSS_PATH}grid.css" type="text/css" rel="stylesheet"/>
+<link href="{Fei:$CSS_PATH}jquery-css.css" type="text/css" rel="stylesheet"/>
+<script type="text/javascript" src="{Fei:$JS_PATH}jquery.js"></script>
+<script type="text/javascript" src="{Fei:$JS_PATH}trhover.js"></script>
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script> 
+ <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script> 
+
+<script>
+$(document).ready(function() {
+  $(".NoticeMain .menuUnit").each(function() {
+    $(this).hover(function(){
+    $(this).children(".downList").css("display", "block");
+        },
+    function(){
+      $(this).children(".downList").css("display","none");
+      }
+    );
+});
+$("#Del").click(function(){
+  $(".Notice").hide("slow");
+  })
+  $("#N_Del").click(function(){
+  $(".EmailPost").hide("slow");
+  })
+  $("#G_Del").click(function(){
+  $(".gridGz").hide("slow");
+  })
+
+    });
+</script>
+
+<script>
+$(document).ready(function(e) {
+    $("#Jicon").click(function(){
+      $(".sharp").slideUp();
+      $("#jiaicon").css("display","block");
+      $("#Jicon").css("display","none");
+    });
+    $("#jiaicon").click(function(){
+      $(".sharp").slideDown();
+      $("#Jicon").css("display","block");
+      $("#jiaicon").css("display","none");
+    })
+    $("#N_jhao").click(function(){
+      $(".Nharp").slideUp();
+      $("#S_jhao").css("display","block");
+      $("#N_jhao").css("display","none");
+    });
+    $("#S_jhao").click(function(){
+      $(".Nharp").slideDown();
+      $("#N_jhao").css("display","block");
+      $("#S_jhao").css("display","none");
+    })
+    $("#G_jhao").click(function(){
+      $(".Gharp").slideUp();
+      $("#z_jhao").css("display","block");
+      $("#G_jhao").css("display","none");
+    });
+    $("#z_jhao").click(function(){
+      $(".Gharp").slideDown();
+      $("#G_jhao").css("display","block");
+      $("#z_jhao").css("display","none");
+    })
+});
+</script>
+</head>
+<body>
+  <div class="fei_grid">
+    <!-- Head Content -->
+    {Fei:include file="public/head.html"}
+    <!-- Top Menu -->
+    {Fei:include file="public/top_menu.html"}
+    <div class="grid_12">
+    <!-- Left Menu -->
+    {Fei:include file="public/left_menu.html"}
+   <!-- tight_table-->
+   <div class="grid_10 Mf">
+      <div class="TopBg">
+     <div class="grid_1 Lf"><div class="imgLeft"><img src="{Fei:$IMG_PATH}rtop.jpg" width="98" height="28px" /></div></div>
+       <div class="grid_11 Mf">
+        <div class="News">
+        <li><span>湖南女孩坠落无盖下水道是天灾还是人祸   <em>(03/25)</em></span></li>
+        <li><span>湖南女孩坠落无盖下水道是天灾还是人祸   <em>(03/25)</em></span></li>
+        <li style="background:none;"><span>湖南女孩坠落无盖下水道是天灾还是人祸   <em>(03/25)</em></span></li>
+        </div>
+       </div>
+     </div>
+    <div class="TabWra">
+      <div class="grid_12">
+         <div class="grid_6 Lf">
+         <div class="Notice">
+        <table width="100%">
+           <tr><td class="TdLeft"></td><td class="TdMiddle"><span>通知公告</span><div class="Rbg"><div id="Del"></div><div id="Jicon"></div><div id="jiaicon"></div></div></td></td><td class="TdRight"></td></tr>
+         </table>
+          <div class="sharp color1">
+            <div class="content">  
+          <div class="NoticeMain">
+           <div class="menuUnit">
+                <span><a href="#">北京五道口房价1平10万 美底特律房产仅售1美元</a></span>
+                <div class="downList" >
+                <div class="Up"></div>
+                    <div class="downListItem">
+                  <font>中国国家主席习近平即将启程对俄罗斯、坦桑尼亚、南非、刚果共和国进行国事访问，并出席在南非举行的金砖国家领导人第五次会晤。</font>
+                    </div>
+                  </div>
+            </div>
+             <div class="menuUnit">
+                <span><a href="#">北京五道口房价1平10万 美底特律房产仅售1美元</a></span>
+                <div class="downList" >
+                   <div class="Up"></div>
+                    <div class="downListItem">
+                    <font>中国国家主席习近平即将启程对俄罗斯、坦桑尼亚、南非、刚果共和国进行国事访问，并出席在南非举行的金砖国家领导</font>
+                    </div>
+                  </div>
+            </div>
+             <div class="menuUnit">
+                <span><a href="#">北京五道口房价1平10万 美底特律房产仅售1美元</a></span>
+                <div class="downList" >
+                <div class="Up"></div>
+                    <div class="downListItem">
+                   <font>中国国家主席习近平即将启程对俄罗斯、坦桑尼亚、南非、刚果共和国进行国事访问，并出席在南非举行的金砖国家领导人第五次会晤。</font>
+                    </div>
+                  </div>
+            </div>
+          </div>
+        </div>
+        <b class="b5"></b><b class="b6"></b><b class="b7"></b><b class="b8"></b>    
+        </div>
+        <div class="FootLine"></div>
+          </div>
+          <div class="gridNews">
+           <table width="100%">
+           <tr>  <td class="NewsLeft"></td><td class="NewsMid"><span>新闻管理</span><div class="HdPic"></div></td></td><td class="NewsRight"></td></tr>
+         </table>
+         <div class="Email color1">
+          <div class="content">  
+          <div class="NewsMain">
+            <dl>
+             <dt><a href="#">北京五道口房价1平10万 美底特律房产仅售1美元</a></dt>
+             <dt><a href="#">北京五道口房价1平10万 美底特律房产仅售1美元</a></dt>
+             <dt><a href="#">北京五道口房价1平10万 美底特律房产仅售1美元</a></dt>
+            </dl>
+            </div>
+        </div>
+        <b class="b5"></b><b class="b6"></b><b class="b7"></b><b class="b8"></b>    
+        </div>
+        <div class="FootLine"></div>
+        </div>
+        <div class="EmailPost">
+           <table width="100%">
+           <tr>  <td class="ELeft"></td><td class="EMid"><span>信函收发</span><div class="Rbg"><div id="N_Del"></div><div id="N_jhao"></div><div id="S_jhao"></div></div></td></td><td class="ERight"></td></tr>
+         </table>
+         <div class="Nharp color1">
+          <div class="content">  
+          <div class="E_bg">
+            <input type="button" class="delete" /><input type="button" class="post" /><input type="button" class="AllButton" />
+          </div>
+          <table width="100%" id="test">
+          <tr style="background:#fafafa">
+          <td width="10%"><input name="" type="checkbox" value=""/><img src="{Fei:$IMG_PATH}linetab.jpg"/></td>
+          <Td width="25%"><span>发件人</span><img src="{Fei:$IMG_PATH}linetab.jpg"/></Td><Td width="65%"><span>主题</span></Td><td></td><tr>
+          <tr>
+           <Td colspan="4"><em>昨天</em>(一封)</Td>
+          </tr>
+          <tr>
+          <td width="10%"><input name="" type="checkbox" value=""/></td>
+          <Td width="25%">我们真的去旅行 </Td><Td width="65%">我们真的去旅行 - 这一天，在迪斯尼找回童话梦</Td><Td align="center"><img src="{Fei:$IMG_PATH}emial.jpg"/></Td>
+          </tr>
+          <tr>
+          <td width="10%"><input name="" type="checkbox" value=""/></td>
+          <Td width="25%">我们真的去旅行 </Td><Td width="65%">我们真的去旅行 - 这一天，在迪斯尼找回童话梦</Td><Td align="center"><img src="{Fei:$IMG_PATH}emial.jpg"/></Td></tr>
+           <tr>
+           <Td colspan="4"><em>昨天</font></em>(一封)</Td>
+          </tr>
+          <tr>
+          <td width="10%"><input name="" type="checkbox" value=""/></td>
+          <Td width="25%">我们真的去旅行 </Td><Td width="65%">我们真的去旅行 - 这一天，在迪斯尼找回童话梦</Td><Td align="center"><img src="{Fei:$IMG_PATH}emial.jpg"/></Td></tr>
+          
+          </table>
+          <div class="tabfoot"><span>1/9 页 下一页 跳转</span><div class="btn"><input name="" type="text" /></div><input type="button" value="" class="Button" /></div>
+        </div>
+        <b class="b5"></b><b class="b6"></b><b class="b7"></b><b class="b8"></b>    
+        </div>
+        <div class="FootLine"></div>
+        </div>
+        </div>
+     <div class="grid_6 Mf">
+       <div class="date"><img src="{Fei:$IMG_PATH}date.jpg" height="477"/></div>
+         <div class="gridGz">
+         <div class="Toptitle"><h4></h4><span>规章制度</span><div class="G_bg"><div id="G_Del"></div><div id="G_jhao"></div><div id="z_jhao"></div></div>       </div>
+            <div class="Gharp color1">
+         <div class="content">  
+           <div class="GMain">
+    <p>为进一步优化教师队伍结构，提高我区教师队伍的整体素质，为义务教育优质均衡发展提供充分的人才保障，经研究，决定面向全国公开招聘中学教师20名，小学教师100名，幼儿教师15名。</p>
+    <p>此次公开招聘工作在芙蓉区机构编制和人事调配工作领导小组的领导下进行，由区人社局牵头，区教育局具体组织实施，区编制部门派人参与。</p>
+     </div>
+    </div>
+    <b class="b5"></b><b class="b6"></b><b class="b7"></b><b class="b8"></b>
+    <div class="FootLine"></div>    
+    </div>
+       </div>
+     </div>
+    </div>
+      </div>
+  </div>
+   </div>
+    {Fei:include file="public/foot.html"}
+  </div>
+</body>
+</html>

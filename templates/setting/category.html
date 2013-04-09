@@ -1,0 +1,94 @@
+
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+{Fei:include file="Public/header.html"}
+<link href="{Fei:$STATICS}css/style.css" rel="stylesheet" type="text/css">
+<script src="{Fei:$STATICS}scripts/script.js"></script>
+<link href='{Fei:$STATICS}css/css.css' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  {Fei:include file="Public/nav.html"}
+    <!--NAV ENDS HERE-->
+  
+  
+  <div class="main">
+  
+  {Fei:include file="Public/notice.html"}
+  <div class="shortable-content">
+      <div class="box _50">
+          <div class="box-header">
+              栏目
+          </div>
+          <div class="box-content">
+              <form action="{Fei:FeiUrl('setting','category')}" method="POST">
+                  <input type="hidden" name="action" value="{Fei:if $smarty.get.catid==''}add{Fei:else}edit{Fei:/if}">
+                  <input type="hidden" name="catid" value="{Fei:$smarty.get.catid}">
+              <div class="form-row">
+                  <label for="栏目名称">
+                      <strong>栏目名称</strong>
+                  </label>
+                  <div class="form-right-col">
+                      <input type="text" class="_100F" name="catname" value="{Fei:$result.catname}">
+                  </div>
+              </div>
+              <div class="form-row">
+                  <label for="英文名称">
+                      <strong>英文名称</strong>
+                  </label>
+                  <div class="form-right-col">
+                      <input type="text" class="_100F" name="letter" value="{Fei:$result.letter}">
+                  </div>
+              </div>
+              <div class="form-row">
+                  <label for="所属栏目">
+                      <strong>所属栏目</strong>
+                  </label>
+                  <div class="form-right-col">
+                      <select name="parentid" class="_100F">
+                          <option value="0">顶级栏目</option>
+                          {Fei:foreach from=$arr item=item1}
+                            <option value="{Fei:$item1.catid}" {Fei:if $result.parentid==$item1.catid}selected{Fei:/if}>{Fei:$item1.catname}</option>
+                                {Fei:foreach from=$item1.zi item=item2} 
+                                    <option value="{Fei:$item2.catid}" {Fei:if $result.parentid==$item2.catid}selected{Fei:/if}>||__{Fei:$item2.catname}</option>
+                                {Fei:/foreach}  
+                        {Fei:/foreach}
+                          
+                      </select>
+                  </div>
+              </div>
+              <div class="form-row">
+                  <label for="排列序号">
+                      <strong>排列序号</strong>
+                  </label>
+                  <div class="form-right-col">
+                      <input type="text" class="_100F" name="listorder" value="{Fei:$result.listorder}">
+                  </div>
+              </div>
+              <div class="form-row">
+                  <label for="是否显示">
+                      <strong>是否显示</strong>
+                  </label>
+                  <div class="form-right-col">
+                      <input type="checkbox" class="styled" name="ismenu" checked="checked">
+                  </div>
+              </div>
+              <div class="form-row">
+                  <input type="submit" class="grey" value="取消">
+                  <input type="submit" value="确定" class="float_r">
+              </div>
+              </form>
+          </div>
+      </div>
+    
+      
+  </div><!--SHORTABLECONTENT-ENDS-->
+
+  </div><!--MAIN ENDS-->
+</body>
+</html>

@@ -1,0 +1,62 @@
+
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+{Fei:include file="Public/header.html"}
+<link href="{Fei:$STATICS}css/style.css" rel="stylesheet" type="text/css">
+<script src="{Fei:$STATICS}scripts/script.js"></script>
+<link href='{Fei:$STATICS}css/css.css' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  {Fei:include file="Public/nav.html"}
+    <!--NAV ENDS HERE-->
+  
+  
+  <div class="main">
+  
+  {Fei:include file="Public/notice.html"}
+    
+  <div class="shortable-content">
+  
+      <div class="box _50">
+        <div class="box-header">
+        个人信息
+        <i class="icon-remove-sign close" title="Close"></i>
+        <i class="icon-minus-sign minimize" title="Minimize/Maximize"></i>
+        </div>
+        
+        <div class="box-content padd-10">
+          <div class="form-row">
+              <label for="现在密码">
+                  <strong>现在密码</strong>
+              </label>
+              <div class="form-right-col">
+                  <input type="text" />
+              </div>
+          </div>
+          <div class="form-row">
+              <label for="新密码">
+                  <strong>新密码</strong>
+              </label>
+              <div class="form-right-col">
+                  <input type="text" />
+              </div>
+              <div class="form-row">
+                  <input type="submit" class="grey" value="取消"/>
+                  <input type="submit" class="float_r" value="确定"/>
+              </div>
+          </div>
+        </div>
+    </div><!--PROFILE PAGE ENDS HERE-->
+    
+      
+  </div><!--SHORTABLECONTENT-ENDS-->
+
+  </div><!--MAIN ENDS-->
+</body>
+</html>
